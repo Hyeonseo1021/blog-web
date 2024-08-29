@@ -1,0 +1,218 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.blurBackground,
+.topBar,
+.bottomBar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  filter: blur(2px);
+}
+
+.blurBackground {
+  top: 0;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.topBar,
+.bottomBar {
+  height: 10vh;
+  background-color: #d4e8ff;
+}
+
+.topBar {
+  top: 0;
+}
+
+.bottomBar {
+  bottom: 0;
+}
+
+.navBar {
+  position: absolute;
+  left: 25%;
+  top: 15vh;
+  width: 50%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navUnderline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  border: 1px solid #00000080;
+}
+
+.navItem {
+  font-size: 2.5vh;
+  color: #000;
+  text-align: center;
+}
+
+.blogTitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2.7vh;
+  font-size: 4vh;
+  color: #000;
+  text-align: center;
+}
+
+.authButtons {
+  position: absolute;
+  right: 3%;
+  top: 3.4vh;
+  display: flex;
+  gap: 5vw;
+}
+
+.loginButton,
+.signInButton {
+  font-size: 2.5vh;
+  color: #000;
+  text-align: center;
+}
+
+.link {
+  color: #000;
+
+}
+
+.mainContent {
+  position: absolute;
+  left: 0;
+  top: 25vh;
+  width: 100%;
+  height: 55vh;
+ 
+}
+
+/* 애니메이션 정의 */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursor-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes hide-cursor {
+  to {
+    border-right: 0;
+  }
+}
+
+/* 타자 효과 스타일 */
+.welcomeText {
+  position: absolute;
+  left: 50%;
+  top: 30vh;
+  transform: translateX(-50%);
+  width: 80%;
+  font-size: 4.5vh;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #000; /* 커서 효과를 주기 위해 설정 */
+  animation: 
+    typing 4s steps(22, end) normal both, /* 타자 애니메이션 */
+    cursor-blink 0.5s step-end 1s infinite, /* 깜빡이는 커서 */
+    hide-cursor 2.9s steps(22, end) forwards ; /* 커서 숨기기 애니메이션 */
+}
+
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* 위로 20px 점프 */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.icon1,
+.icon2,
+.icon3 {
+  position: absolute;
+  width: 15vw;
+  height: auto;
+  animation: jump 1.5s ease-in-out infinite;
+}
+
+.icon1 {
+  left: 42.5%;
+  top: 45vh;
+}
+
+.icon2 {
+  left: 25%;
+  top: 45vh;
+}
+
+.icon3 {
+  right: 25%;
+  top: 45vh;
+}
+
+
+.icon4,.icon5,.icon6 {
+  position: absolute;
+  bottom: 2vh;
+  max-width: 3vw;
+  height: auto;
+}
+
+.icon4 {
+  right: 54%;
+}
+
+.icon5 {
+  left: 54%;
+}
+
+.icon6 {
+  left: 48.5%;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .navBar {
+    top: 10vh;
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .welcomeText {
+    top: 25vh;
+    font-size: 2.5vh;
+  }
+
+  .icon1,
+  .icon2,
+  .icon3 {
+    width: 25vw;
+  }
+}
