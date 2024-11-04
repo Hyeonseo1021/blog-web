@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DungGeunMo';
+}
+
+a {
+    color: inherit; /* 링크 색상을 부모 요소와 동일하게 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+a:visited {
+    color: inherit; /* 방문한 링크 색상을 부모 요소와 동일하게 설정 */
+}
+
+
+

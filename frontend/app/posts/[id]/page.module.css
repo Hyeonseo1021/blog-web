@@ -1,0 +1,122 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.blurBackground,
+.topBar,
+.bottomBar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    filter: blur(2px);
+}
+
+.blurBackground {
+    top: 0;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.topBar,
+.bottomBar {
+    height: 10vh;
+    background-color: #d4e8ff;
+}
+
+.topBar {
+    top: 0;
+}
+
+.bottomBar {
+    bottom: 0;
+}
+
+
+.blogTitle {
+    position: absolute;
+    text-decoration: none;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2.7vh;
+    font-size: 4vh;
+    color: #000;
+    text-align: center;
+    
+}
+
+.mainContainer {
+    position: absolute;
+    left: 0;
+    top: 15vh;
+    width: 100%;
+    height: 55vh;
+}
+
+.mainContainer h1 {
+    margin-bottom: 20px;
+}
+
+.content {
+    font-size: 20px;
+}
+
+.editButton, .deleteButton {
+    background-color: #5697f9e3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.commentsSection {
+ 
+    margin-top: 20px;
+    text-align: center;
+}
+
+.commentsSection h3{
+    text-align: center;
+}
+
+.commentArea {
+    width: 500px;
+    text-align: center;
+}
+
+.confirm {
+    height: 40px;
+    background-color: #5697f9e3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.icon4, .icon5, .icon6 {
+    position: absolute;
+    bottom: 2vh;
+    max-width: 3vw; /* 고정된 너비로 설정 */
+    height: auto;
+}
+
+.icon4 {
+    right: 54%; /* 정확한 위치 조정 */
+}
+
+.icon5 {
+    left: 54%; /* 정확한 위치 조정 */
+}
+
+.icon6 {
+    left: 48.5%; /* 정확한 위치 조정 */
+}

@@ -1,0 +1,254 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.blurBackground,
+.topBar,
+.bottomBar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  filter: blur(2px);
+}
+
+.blurBackground {
+  top: 0;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.topBar,
+.bottomBar {
+  height: 10vh;
+  background-color: #d4e8ff;
+}
+
+.topBar {
+  top: 0;
+}
+
+.bottomBar {
+  bottom: 0;
+}
+
+.menuButton {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menuButton img {
+  width: 60px;
+  height: 55px;
+}
+
+.navBar {
+  position: absolute;
+  top: 89px;
+  left: -100%; /* 화면 밖에서 시작 */
+  width: 200px;
+  height: 80vh;
+  text-align: center;
+  transition: left 0.3s ease-in-out; /* 슬라이드 애니메이션 */
+  z-index: 99;
+  border-right: 1px solid black;
+}
+
+.navBarOpen {
+  left: 0; /* 슬라이드로 화면 안으로 들어옴 */
+}
+
+.navItem {
+  margin-top: 20px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.blogTitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2.7vh;
+  font-size: 4vh;
+  color: #000;
+  text-align: center;
+}
+
+.authButtons {
+  position: absolute;
+  right: 3%;
+  top: 3.4vh;
+  display: flex;
+  gap: 5vw;
+}
+
+.loginButton,
+.signInButton {
+  font-size: 2.5vh;
+  color: #000;
+  text-align: center;
+}
+
+.profileButton {
+  position: absolute;
+  display: flex;
+  align-items: center; /* 가로 가운데 정렬 */
+}
+
+.userInfo {
+  position: absolute;
+  right: 1.8%;
+  top: 1.5vh;
+}
+
+.userName {
+  position: absolute;
+  top: 7vh;
+  right: 2%;
+}
+
+.profileIcon {
+  width: 50px; /* Set width to 100px */
+  height: 50px; /* Set height to 100px */
+  object-fit: cover; /* Maintain aspect ratio while filling the area */
+  border-radius: 50%; 
+  position:absolute;
+  right: 10%;
+  top: -10;
+}
+
+
+.mainContent {
+  position: absolute;
+  left: 0;
+  top: 65vh;
+  width: 100%;
+  height: 55vh;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* 애니메이션 정의 */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursor-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes hide-cursor {
+  to {
+    border-right: 0;
+  }
+}
+
+/* 타자 효과 스타일 */
+.welcomeText {
+  position: absolute;
+  left: 50%;
+  top: 20vh;
+  transform: translateX(-50%);
+  width: 80%;
+  font-size: 4.5vh;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #000; /* 커서 효과를 주기 위해 설정 */
+  animation: 
+    typing 4s steps(22, end) normal both, /* 타자 애니메이션 */
+    cursor-blink 0.5s step-end 1s infinite, /* 깜빡이는 커서 */
+    hide-cursor 2.9s steps(22, end) forwards ; /* 커서 숨기기 애니메이션 */
+}
+
+
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* 위로 20px 점프 */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.icon1,
+.icon2,
+.icon3 {
+  position: absolute;
+  width: 15vw;
+  height: auto;
+  animation: jump 1.5s ease-in-out infinite;
+}
+
+.icon1 {
+  left: 42.5%;
+  top: 35vh;
+}
+
+.icon2 {
+  left: 25%;
+  top: 35vh;
+}
+
+.icon3 {
+  right: 25%;
+  top: 35vh;
+}
+
+
+.icon4,.icon5,.icon6 {
+  position: absolute;
+  bottom: 2vh;
+  max-width: 3vw;
+  height: auto;
+}
+
+.icon4 {
+  right: 54%;
+}
+
+.icon5 {
+  left: 54%;
+}
+
+.icon6 {
+  left: 48.5%;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .navBar {
+    top: 10vh;
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .welcomeText {
+    top: 25vh;
+    font-size: 2.5vh;
+  }
+
+  .icon1,
+  .icon2,
+  .icon3 {
+    width: 25vw;
+  }
+}
